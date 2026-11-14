@@ -10,3 +10,8 @@ e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 - Skill para apresentação profissional de projetos no GitHub.
 - Skill para versionamento, changelog e publicação segura.
+
+### Alterado
+
+- Instruções de branches, push, pull requests e releases separadas por finalidade.
+- Documentação de instalação preparada para uso em Codex, Claude Code e OpenCode.

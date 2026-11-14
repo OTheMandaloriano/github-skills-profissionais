@@ -31,23 +31,32 @@ pessoa apenas pede uma explicação ou uma revisão.
 | [`github-projeto-profissional`](github-projeto-profissional/SKILL.md) | Organiza README, arquitetura, demonstrações, About, Topics, Releases, Deployments, Packages e branches. |
 | [`versionamento-git`](versionamento-git/SKILL.md) | Mantém commits coesos, revisa o diff preparado, atualiza changelog quando necessário e publica com segurança. |
 
-## <img src="https://api.iconify.design/solar/box-bold.svg?color=%2310B981&width=24" align="top" /> &nbsp;Instalação
+## <img src="https://api.iconify.design/solar/box-bold.svg?color=%2310B981&width=24" align="top" /> &nbsp;Compatibilidade e instalação
 
-Copie as duas pastas para a pasta de skills da sua instalação do Codex e reinicie
-o aplicativo:
+As instruções usam o formato aberto `SKILL.md`, compatível com Codex, Claude
+Code e OpenCode. O conteúdo é o mesmo; cada ferramenta usa uma pasta de
+instalação própria.
+
+Copie as duas pastas para um destes caminhos e reinicie a ferramenta:
 
 ```text
-~/.codex/skills/
-├── github-projeto-profissional/
-│   └── SKILL.md
-└── versionamento-git/
-    └── SKILL.md
+Codex:       ~/.codex/skills/
+Claude Code: ~/.claude/skills/
+OpenCode:    ~/.config/opencode/skills/
 ```
 
-No Windows, a pasta geralmente fica em:
+No OpenCode, também é possível instalar por projeto em:
+
+```text
+.opencode/skills/
+```
+
+No Windows, substitua `~` pela pasta do seu usuário. Por exemplo:
 
 ```text
 C:\Users\SEU_USUÁRIO\.codex\skills\
+C:\Users\SEU_USUÁRIO\.claude\skills\
+C:\Users\SEU_USUÁRIO\.config\opencode\skills\
 ```
 
 ## <img src="https://api.iconify.design/solar/rocket-2-bold.svg?color=%23F97316&width=24" align="top" /> &nbsp;Uso
@@ -73,6 +82,11 @@ precisa de documentação e changelog atualizados.
 O repositório deve conter somente material do projeto. Não publique referências
 a conversas, pessoas usuárias, IA, prompts, aprovações ou decisões de bastidor.
 Escreva sempre para quem usa, mantém ou contribui com o projeto.
+
+Uma branch não é uma release. Ela isola uma mudança e pode servir para revisão
+por pull request. A skill cria branch somente quando a política do repositório,
+o risco ou a colaboração justificarem; push e release continuam dependendo da
+intenção do pedido e da preparação da versão.
 
 ## <img src="https://api.iconify.design/solar/users-group-rounded-bold.svg?color=%2310B981&width=24" align="top" /> &nbsp;Contribuição
 

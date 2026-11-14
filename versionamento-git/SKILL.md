@@ -20,7 +20,7 @@ Use o verbo do pedido para definir o escopo:
 - **Implementar, corrigir ou atualizar:** altere e valide localmente. Não faça
   push sem pedido explícito de publicação ou autorização já existente.
 - **Publicar ou enviar atualização:** revise, crie commits coesos e faça push
-  somente do que pertence ao pedido.
+  somente do que pertence ao pedido. Isso não cria uma release por si só.
 - **Preparar ou publicar release:** avalie versão, changelog, tag, validação e
   notas da release. Não crie release apenas porque houve um commit.
 
@@ -156,6 +156,22 @@ Use notas de release profissionais, escritas para quem consome o produto. Elas
 devem resumir destaques, correções, compatibilidade, passos de atualização e
 limitações relevantes, quando existirem. Não despeje a lista bruta de commits,
 não invente benefícios e não publique release vazia.
+
+## Branch, push e release
+
+São ações diferentes:
+
+| Ação | Finalidade | Quando usar |
+| --- | --- | --- |
+| Branch | Isolar trabalho e permitir revisão. | Quando a política do repositório exigir pull request, a mudança for arriscada ou houver colaboração paralela. |
+| Push | Enviar commits para o remoto. | Quando o usuário pedir publicação ou quando esse envio já estiver autorizado no fluxo. |
+| Pull request | Revisar e integrar uma branch. | Quando houver revisão obrigatória ou quando a `main` estiver protegida. |
+| Release | Entregar uma versão para consumo. | Quando a versão estiver validada, versionada, documentada e pronta para uso. |
+
+Não crie branch, push ou release apenas porque um deles é tecnicamente possível.
+Siga primeiro as regras da branch atual, a convenção do projeto e o verbo do
+pedido. Uma solicitação de "publique a atualização" autoriza o envio da
+mudança concluída, mas não autoriza lançar uma versão se isso não foi pedido.
 
 ---
 

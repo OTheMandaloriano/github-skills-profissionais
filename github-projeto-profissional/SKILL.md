@@ -111,6 +111,11 @@ a release apresenta uma versão pronta para quem consome o projeto.
 Uma branch é uma linha de trabalho isolada. Ela evita que uma mudança
 incompleta se misture à branch principal e permite revisão por pull request.
 
+Criar uma branch não publica uma versão e não cria uma release. Ela pode ser
+enviada ao remoto para abrir um pull request, mas a publicação de uma versão
+para quem consome o produto continua dependendo de commit integrado, tag e
+release quando solicitada.
+
 Não crie branches por hábito. Para uma mudança pequena, de baixo risco, feita
 por uma pessoa, trabalhar na branch principal pode ser correto se essa for a
 convenção do projeto. Sugira uma branch quando houver revisão, mudança
@@ -128,6 +133,20 @@ docs/guia-instalacao
 Não mantenha branches permanentes como `dev`, `teste` ou `nova-versao` sem um
 processo de entrega que realmente as utilize. Proteja `main` quando houver
 equipe, revisão obrigatória, CI ou publicação automática.
+
+Escolha o fluxo a partir do repositório, nesta ordem:
+
+| Cenário | Fluxo adequado |
+| --- | --- |
+| `main` protegida, pull request obrigatório ou revisão de outra pessoa | Crie branch, implemente, valide, envie e abra pull request. |
+| Mudança arriscada, experimento, correção urgente ou trabalho paralelo | Crie branch isolada, mesmo que a `main` aceite push direto. |
+| Mudança pequena, baixo risco, uma pessoa e convenção de commits diretos | Trabalhe na branch atual e faça commit. Só envie se houver pedido de publicação. |
+| Usuário pediu uma release | Não deduza branch. Primeiro confirme se a versão está pronta, validada e integrada conforme a convenção. |
+
+Se a configuração do repositório não deixar claro se `main` aceita push direto,
+inspecione as regras e o histórico. Quando ainda houver escolha de processo que
+afete outras pessoas, explique a opção e peça direção antes de criar ou enviar
+uma branch.
 
 ## Administração contínua
 
