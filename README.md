@@ -31,6 +31,64 @@ pessoa apenas pede uma explicação ou uma revisão.
 | [`github-projeto-profissional`](github-projeto-profissional/SKILL.md) | Organiza README, arquitetura, demonstrações, About, Topics, Releases, Deployments, Packages e branches. |
 | [`versionamento-git`](versionamento-git/SKILL.md) | Mantém commits coesos, revisa o diff preparado, atualiza changelog quando necessário e publica com segurança. |
 
+## <img src="https://api.iconify.design/solar/question-circle-bold.svg?color=%23F97316&width=24" align="top" /> &nbsp;Qual skill devo usar?
+
+Use esta seção como guia rápido. Você não precisa entender Git para escolher a
+skill: diga o objetivo com palavras naturais e use a que combina com o tipo de
+trabalho.
+
+### `github-projeto-profissional`
+
+Use quando quiser deixar o projeto bem apresentado, fácil de entender e pronto
+para outras pessoas encontrarem ou contribuírem no GitHub.
+
+Ela ajuda a organizar:
+
+- nome, descrição, About e Topics do repositório;
+- README, instalação, recursos principais e limitações;
+- logo, capturas de tela, vídeo e diagrama de arquitetura, quando existirem;
+- Issues, pull requests, contribuição, segurança e licença;
+- uso correto de branches, deployments, packages e releases.
+
+Exemplos de pedidos:
+
+```text
+Organize este repositório para o GitHub.
+Vamos começar este projeto e deixá-lo profissional.
+Melhore o README e explique como instalar.
+Prepare uma página de projeto que outras pessoas entendam.
+```
+
+Ela não cria uma release, branch ou publicação só porque foi aberta. Primeiro
+avalia o projeto e só propõe essas ações quando forem necessárias.
+
+### `versionamento-git`
+
+Use quando o projeto já tem uma alteração pronta e você quer salvar o histórico
+corretamente, enviar ao GitHub ou preparar uma nova versão.
+
+Ela ajuda a:
+
+- revisar o que mudou antes de salvar;
+- separar mudanças que não deveriam ficar no mesmo commit;
+- criar uma mensagem de commit clara e profissional;
+- impedir que tokens, arquivos temporários ou conteúdo de conversa subam;
+- atualizar o changelog quando a mudança for relevante;
+- fazer push quando você pedir para publicar;
+- preparar uma release somente quando houver versão pronta para uso.
+
+Exemplos de pedidos:
+
+```text
+Revise as alterações deste projeto antes de publicar.
+Corrija este erro e publique a atualização.
+Prepare uma release com notas para quem usa o projeto.
+Veja se há arquivos desnecessários antes do commit.
+```
+
+Ela não publica nada quando você apenas tira uma dúvida, pede explicação ou
+solicita um diagnóstico.
+
 ## <img src="https://api.iconify.design/solar/box-bold.svg?color=%2310B981&width=24" align="top" /> &nbsp;Compatibilidade e instalação
 
 As instruções usam o formato aberto `SKILL.md`, compatível com Codex, Claude

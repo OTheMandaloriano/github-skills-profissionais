@@ -16,3 +16,4 @@ e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 - Instruções de branches, push, pull requests e releases separadas por finalidade.
 - Documentação de instalação preparada para uso em Codex, Claude Code e OpenCode.
+- README ampliado com um guia de escolha das skills para pessoas usuárias.
