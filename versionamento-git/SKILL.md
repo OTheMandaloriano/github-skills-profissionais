@@ -1,13 +1,13 @@
 ---
 name: versionamento-git
-description: Padrão universal de versionamento — descobrir a convenção do repositório, 1 commit por mudança lógica com título categorizado em pt-BR, verificar de fato que o remoto recebeu, e o procedimento seguro para corrigir histórico já enviado. Use ao terminar qualquer alteração de código, config ou documentação que deva ser versionada, e sempre que for commitar, enviar ou corrigir histórico em qualquer projeto.
+description: Padrão universal de versionamento para descobrir a convenção do repositório, criar um commit por mudança lógica, verificar o envio ao remoto e corrigir histórico de forma segura. Use ao commitar, enviar ou corrigir histórico em qualquer projeto.
 ---
 
 # Versionamento: commit por mudança
 
 Toda mudança concluída vira um commit claro, atômico e rastreável, e chega
-ao remoto. O título tem de ser entendido de imediato por uma pessoa **e**
-por uma IA que abra o repositório daqui a seis meses.
+ao remoto. O título precisa ser entendido de imediato por qualquer pessoa que
+abra o repositório daqui a seis meses.
 
 Isto vale para **qualquer projeto**. Nada aqui é específico de um domínio.
 
@@ -33,14 +33,14 @@ projeto. Uma dúvida comum nunca autoriza criar arquivos ou histórico.
 ## Linguagem e escopo do histórico
 
 Commits, changelog, tags, releases, nomes de branch e arquivos devem descrever
-o projeto e a mudança técnica. Não mencione usuário, IA, agente, prompt, chat,
-conversa, aprovação ou instruções de bastidor. O histórico precisa fazer
+o projeto e a mudança técnica. Não mencione conversa, prompt, aprovação ou
+instruções de bastidor. O histórico precisa fazer
 sentido para alguém que abra o repositório sem conhecer a conversa original.
 
-Exemplo inadequado: `[fix] corrige o que o usuário pediu no chat`.
+Exemplo inadequado: `[fix] corrige a solicitação discutida no chat`.
 Exemplo adequado: `[fix] renova a sessão antes de consultar limites`.
 
-Não adicione ao stage arquivos temporários, exportações de chat, rascunhos ou
+Não adicione ao stage arquivos temporários, exportações de conversa, rascunhos ou
 artefatos sem função no produto. Se houver dúvida sobre a origem ou necessidade
 de um arquivo, deixe-o fora do commit e informe o motivo.
 
@@ -93,8 +93,8 @@ mudou e, se couber na linha, por quê.
 - Ruim: `[fix] CORRIGIDO O BUG DO TEMPO`
 - Bom: `[fix] O relógio do contrato vem do item, e não do bloco de contrato`
 
-**Sem trailer de ferramenta ou IA.** Nada de `Co-Authored-By: Claude`,
-`Generated with`, ou menção a modelo. O histórico é do projeto.
+**Sem trailer de ferramenta.** Não inclua `Co-Authored-By`, `Generated with`
+ou menção ao processo usado para produzir a mudança. O histórico é do projeto.
 
 ---
 

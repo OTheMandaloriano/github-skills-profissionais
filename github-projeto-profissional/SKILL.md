@@ -32,15 +32,15 @@ para cumprir um pedido de trabalho, como "vamos começar este projeto" ou
 
 O repositório deve explicar e entregar o projeto, nunca registrar a conversa
 que levou até ele. Não inclua em código, documentação, commits, changelog,
-releases, branches ou nomes de arquivo referências a usuário, IA, agente,
-prompt, chat, conversa, aprovação ou instrução de bastidor.
+releases, branches ou nomes de arquivo referências a conversa, prompt,
+aprovação ou instrução de bastidor.
 
 Use linguagem destinada a quem usa, mantém ou contribui com o projeto. Em vez
-de "o usuário pediu uma correção", registre o comportamento corrigido. Em vez
-de "a IA implementou", descreva a funcionalidade entregue. Só mantenha
-arquivos que sejam necessários para executar, compreender, distribuir, testar
-ou manter o produto. Arquivos temporários, exportações de chat, rascunhos e
-artefatos sem uso devem ficar fora do controle de versão.
+de registrar uma solicitação, descreva o comportamento corrigido ou a
+funcionalidade entregue. Só mantenha arquivos necessários para executar,
+compreender, distribuir, testar ou manter o produto. Arquivos temporários,
+exportações de conversa, rascunhos e artefatos sem uso ficam fora do controle
+de versão.
 
 Leia o código, os arquivos de documentação, a configuração de build e o
 histórico recente antes de propor alterações. Preserve a convenção existente
@@ -72,6 +72,10 @@ O README deve dizer o que o projeto é, o problema que resolve, requisitos,
 instalação, uso e limitações reais. Em projetos que se beneficiem disso,
 inclua recursos principais, arquitetura e uma demonstração visual.
 
+Comece pelo produto, não pelo histórico de desenvolvimento. A pessoa que abre
+o repositório precisa entender o que ele faz, para quem serve e como começar a
+usá-lo. Mudanças têm lugar no changelog.
+
 - Use ícones SVG consistentes do [Iconify](https://icon-sets.iconify.design/)
   em títulos quando eles melhorarem a leitura. Prefira uma coleção, como
   `solar`, e poucas cores com significado consistente.
@@ -86,6 +90,42 @@ inclua recursos principais, arquitetura e uma demonstração visual.
 - O GitHub gera a lista de contribuidores a partir de commits. Não duplique
   essa lista manualmente. Registre créditos específicos apenas quando houver
   exigência de atribuição.
+
+### Ícones, badges e idiomas
+
+Use ícones SVG do [Iconify](https://icon-sets.iconify.design/) quando eles
+melhorarem a leitura de títulos ou destaques. Escolha uma coleção coerente,
+como `solar`, e use poucas cores com significado estável: azul para informação,
+verde para disponibilidade e laranja para atenção.
+
+Organize badges em duas fileiras quando houver informações suficientes:
+
+1. Tecnologias, em `for-the-badge`, para mostrar as bases do projeto.
+2. Fatos verificáveis, em `flat-square`, para versão, licença e status.
+
+Cada badge deve apontar para uma fonte útil. Evite badges decorativos ou com
+status que não seja medido. Se houver mais de um idioma, mantenha o README
+principal na raiz e traduções em `docs/idiomas/`. Use a mesma navegação de
+idiomas em todos os arquivos e só mantenha traduções que possam continuar
+atualizadas.
+
+### Organização da documentação
+
+Mantenha a raiz como vitrine do projeto. Uma estrutura comum é:
+
+```text
+README.md            apresentação e uso
+CHANGELOG.md         alterações relevantes entre versões
+LICENSE ou NOTICE.md licenciamento e atribuições
+docs/                documentação técnica e traduções
+.github/             modelos de issue, pull request e automações
+CONTRIBUTING.md      regras de contribuição
+SECURITY.md          política de segurança
+```
+
+Use tabelas para comparações, como requisitos, limitações e compatibilidade.
+Use callouts do GitHub para avisos que não podem passar despercebidos e
+`<details>` para aprofundar um assunto sem poluir a leitura principal.
 
 Mantenha a raiz enxuta: `README.md`, `CHANGELOG.md`, licença ou `NOTICE.md` e
 os arquivos essenciais. Coloque documentação técnica em `docs/` e modelos de
@@ -105,6 +145,17 @@ Use cada recurso somente quando houver produto ou processo para sustentá-lo:
 
 Uma release não é um commit. O commit registra uma unidade coesa de trabalho;
 a release apresenta uma versão pronta para quem consome o projeto.
+
+### Antes de tornar público
+
+Antes de publicar, verifique se o repositório não contém e-mails pessoais,
+caminhos locais, IPs, senhas, tokens, chaves, dados de clientes ou imagens de
+terceiros sem licença. Confira se Description, Website, Topics, README,
+licença e arquivos de contribuição descrevem o mesmo produto.
+
+Não atribua uma licença nova a um fork que não possua licença compatível. Nesse
+caso, preserve a atribuição original e use `NOTICE.md` para explicar a origem
+e as limitações de distribuição.
 
 ## Branches
 
@@ -168,6 +219,18 @@ GitHub:
 Não deixe a documentação defasada, mas também não reescreva o README para
 registrar cada detalhe de implementação. A revisão deve acompanhar mudanças
 que alteram o entendimento ou o uso do produto.
+
+## Limpeza antes de publicar
+
+Antes de preparar um commit ou uma publicação, confira `git status --short` e
+revise os arquivos que serão adicionados. Procure especialmente por logs,
+arquivos de build, cópias de banco de dados, exportações, capturas temporárias,
+arquivos `.env`, relatórios locais e rascunhos.
+
+Não remova arquivos por suposição. Use uma simulação, como `git clean -nd`,
+para identificar resíduos ignorados e explique o resultado antes de apagar
+qualquer coisa. Um arquivo fica no repositório somente quando tem função clara
+no produto, na documentação, nos testes ou na distribuição.
 
 ## Primeiro uso e acesso ao GitHub
 
