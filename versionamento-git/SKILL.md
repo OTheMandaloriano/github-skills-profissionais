@@ -314,4 +314,3 @@ atropela. Prefira sempre o primeiro.
 - Rodar os hooks e testes que existirem, e não pular com `--no-verify`.
 - Se o push falhar por credencial ou rede, **relate o erro real**. Não
   presuma sucesso.
-

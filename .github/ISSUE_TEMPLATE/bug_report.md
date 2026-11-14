@@ -15,9 +15,9 @@ Descreva o resultado esperado.
 
 ## Como reproduzir
 
-1. 
-2. 
-3. 
+1. Descreva o primeiro passo.
+2. Descreva o segundo passo.
+3. Descreva o terceiro passo.
 
 ## Contexto
 
