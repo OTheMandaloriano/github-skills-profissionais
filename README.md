@@ -173,6 +173,119 @@ por pull request. A skill cria branch somente quando a política do repositório
 o risco ou a colaboração justificarem; push e release continuam dependendo da
 intenção do pedido e da preparação da versão.
 
+## <img src="https://api.iconify.design/solar/book-2-bold.svg?color=%23F97316&width=24" align="top" /> &nbsp;Entenda os conceitos
+
+<details>
+<summary><b>O que é uma branch?</b></summary>
+
+<br>
+
+Uma **branch** é uma cópia temporária da linha principal do projeto para
+trabalhar sem mexer diretamente no código oficial.
+
+Pense na `main` como o documento final. Uma branch é uma cópia de trabalho
+onde você faz alterações, testa e revisa antes de colocar o resultado na linha
+principal.
+
+```text
+main ─────── projeto estável
+
+main ────┬── branch: correcao-login
+         └── alterações e testes
+                 ↓
+              aprovação
+                 ↓
+main ─────────── correção integrada
+```
+
+Use uma branch quando:
+
+- a mudança é grande ou arriscada;
+- outra pessoa precisa revisar;
+- há mais de uma pessoa trabalhando;
+- você quer testar uma ideia sem risco;
+- precisa corrigir algo urgente sem misturar com outro trabalho.
+
+Exemplo:
+
+```text
+main
+└── fix/sessao-expirada
+```
+
+O fluxo cria a branch `fix/sessao-expirada`, corrige o problema, testa e abre
+uma revisão. Depois, a correção é integrada à `main`.
+
+Não precisa usar branch para uma alteração pequena, segura e feita só por você,
+se o repositório permite commits diretos na `main`.
+
+Uma branch **não é uma versão pública**. Ela não cria release, não atualiza o
+programa para usuários e não substitui a `main`. Ela organiza o trabalho antes
+da integração.
+
+</details>
+
+<details>
+<summary><b>O que é um commit?</b></summary>
+
+<br>
+
+Um **commit** é um registro de uma mudança concluída. Ele salva uma versão
+pequena e identificável do projeto, com uma mensagem que explica a intenção da
+mudança.
+
+Exemplo: depois de corrigir a renovação de sessão e validar o resultado, o
+commit pode ser:
+
+```text
+[fix] renova a sessão antes de consultar limites
+```
+
+Um commit não publica o projeto sozinho. Ele apenas registra o trabalho no
+histórico local para que seja possível entender, revisar ou recuperar mudanças.
+
+</details>
+
+<details>
+<summary><b>O que é push?</b></summary>
+
+<br>
+
+**Push** envia commits do seu computador para o GitHub. É o momento em que o
+histórico local passa a aparecer no repositório remoto.
+
+Use push quando a mudança estiver validada e você pedir para publicar, ou
+quando o fluxo do projeto já autorizar esse envio. Push não cria uma release.
+
+</details>
+
+<details>
+<summary><b>O que é um pull request?</b></summary>
+
+<br>
+
+Um **pull request**, também chamado de PR, é um pedido para revisar e integrar
+uma branch na `main`. Ele mostra o diff, permite comentários e registra a
+aprovação antes da integração.
+
+Use pull request quando a `main` for protegida, outra pessoa precisar revisar
+ou a mudança envolver risco maior.
+
+</details>
+
+<details>
+<summary><b>O que é uma release?</b></summary>
+
+<br>
+
+Uma **release** é uma versão preparada para quem usa o projeto. Ela reúne uma
+tag, notas de atualização e, quando necessário, arquivos para download.
+
+Crie uma release quando a versão estiver validada e pronta para consumo. Não é
+necessário criar uma release para cada commit ou correção pequena.
+
+</details>
+
 ## <img src="https://api.iconify.design/solar/users-group-rounded-bold.svg?color=%2310B981&width=24" align="top" /> &nbsp;Contribuição
 
 Leia [CONTRIBUTING.md](CONTRIBUTING.md) antes de propor uma alteração. Use

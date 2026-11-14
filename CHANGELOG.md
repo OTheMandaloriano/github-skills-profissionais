@@ -19,3 +19,5 @@ e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 - README ampliado com um guia de escolha das skills para pessoas usuárias.
 - `github-projeto-profissional` ampliada com o padrão detalhado de README,
   documentação, publicação e limpeza de resíduos.
+- README ampliado com explicações clicáveis sobre branch, commit, push, pull
+  request e release.
