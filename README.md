@@ -59,6 +59,33 @@ C:\Users\SEU_USUÁRIO\.claude\skills\
 C:\Users\SEU_USUÁRIO\.config\opencode\skills\
 ```
 
+### Instalação assistida
+
+Após baixar ou clonar este repositório, peça ao seu assistente compatível:
+
+```text
+Instale as skills deste repositório para Codex, Claude Code e OpenCode.
+Mostre o que será alterado e não sobrescreva skills existentes sem minha confirmação.
+```
+
+No Windows, também é possível executar:
+
+```powershell
+.\scripts\install-skills.ps1 -Target All -WhatIf
+.\scripts\install-skills.ps1 -Target Codex
+```
+
+Em macOS ou Linux, use:
+
+```bash
+./scripts/install-skills.sh --target all --dry-run
+./scripts/install-skills.sh --target codex
+```
+
+Os instaladores interrompem a execução se encontrarem uma skill com o mesmo
+nome. Use `-Force` no PowerShell ou `--force` no shell somente depois de revisar
+a atualização que será aplicada.
+
 ## <img src="https://api.iconify.design/solar/rocket-2-bold.svg?color=%23F97316&width=24" align="top" /> &nbsp;Uso
 
 Use pedidos naturais. A intenção do verbo define o fluxo:
