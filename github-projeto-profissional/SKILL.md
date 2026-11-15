@@ -76,6 +76,35 @@ Comece pelo produto, não pelo histórico de desenvolvimento. A pessoa que abre
 o repositório precisa entender o que ele faz, para quem serve e como começar a
 usá-lo. Mudanças têm lugar no changelog.
 
+### Briefing antes de redesenhar um README
+
+Antes de criar ou reorganizar materialmente um README, reúna em uma pergunta
+curta apenas as escolhas que ainda não foram definidas e que mudam o resultado:
+
+- idiomas que serão mantidos e qual é o README principal;
+- identidade do cabeçalho, incluindo referências visuais que a pessoa forneceu;
+- nível de detalhe da estrutura, principalmente quando existe um inventário por
+  arquivo a documentar;
+- se a arquitetura deve ter explicação textual, diagrama, imagem ou ambos.
+
+Use a interface nativa de seleção interativa disponível no agente para essas
+perguntas. Apresente opções curtas, mutuamente exclusivas, com uma recomendação
+e seu impacto; agrupe as escolhas independentes em uma única interação. Não
+trate a opção pré-selecionada como resposta e não altere o README até a pessoa
+escolher. Se a plataforma não oferecer uma interface de seleção, faça a mesma
+pergunta em texto simples, com opções explícitas.
+
+Não deduza idiomas, bandeiras, uma explicação de arquitetura ou uma imagem só
+porque são comuns em outros repositórios. Não use bandeiras sem uma versão
+correspondente e mantida do README. Quando uma referência visual for fornecida,
+aplique seus princípios de organização, hierarquia e densidade de informação;
+não copie nomes, números, tecnologias ou alegações da referência.
+
+Para árvores muito longas, mantenha a visão que orienta a navegação aberta no
+README e use `<details>` para o inventário completo. Cada item do inventário
+deve refletir um caminho existente e uma função confirmada, sem preencher
+lacunas com suposições.
+
 - Use ícones SVG consistentes do [Iconify](https://icon-sets.iconify.design/)
   em títulos quando eles melhorarem a leitura. Prefira uma coleção, como
   `solar`, e poucas cores com significado consistente.
@@ -108,6 +137,12 @@ status que não seja medido. Se houver mais de um idioma, mantenha o README
 principal na raiz e traduções em `docs/idiomas/`. Use a mesma navegação de
 idiomas em todos os arquivos e só mantenha traduções que possam continuar
 atualizadas.
+
+O cabeçalho deve formar uma unidade visual: título, descrição curta, badges e
+links de entrada precisam explicar o projeto antes da primeira seção técnica.
+Use uma primeira linha para tecnologias verificáveis e uma segunda para fatos
+do repositório, quando ambos existirem. Inclua somente links de navegação que
+levem a seções ou documentos existentes.
 
 ### Organização da documentação
 
