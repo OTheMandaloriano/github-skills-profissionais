@@ -76,16 +76,19 @@ Comece pelo produto, não pelo histórico de desenvolvimento. A pessoa que abre
 o repositório precisa entender o que ele faz, para quem serve e como começar a
 usá-lo. Mudanças têm lugar no changelog.
 
-### Briefing antes de redesenhar um README
+### Decisões que exigem briefing interativo
 
-Antes de criar ou reorganizar materialmente um README, reúna em uma pergunta
-curta apenas as escolhas que ainda não foram definidas e que mudam o resultado:
+Ao criar ou reorganizar um README, aplique por padrão a apresentação
+profissional compatível com o projeto: cabeçalho hierárquico, ícones quando
+ajudarem, badges verificáveis em duas linhas, navegação por links existentes,
+estrutura orientadora e `<details>` para inventários extensos. Use referências
+visuais fornecidas para orientar a qualidade e a organização, sem transformar
+esse padrão em uma pergunta.
 
-- idiomas que serão mantidos e qual é o README principal;
-- identidade do cabeçalho, incluindo referências visuais que a pessoa forneceu;
-- nível de detalhe da estrutura, principalmente quando existe um inventário por
-  arquivo a documentar;
-- se a arquitetura deve ter explicação textual, diagrama, imagem ou ambos.
+Pergunte somente sobre decisões que a pessoa precisa tomar e que mudam o
+escopo: idiomas adicionais que serão mantidos, inclusão de explicação de
+arquitetura no README quando ela não foi solicitada e qualquer recurso externo,
+release ou publicação que não esteja autorizado.
 
 Use a interface nativa de seleção interativa disponível no agente para essas
 perguntas. Apresente opções curtas, mutuamente exclusivas, com uma recomendação
