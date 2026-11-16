@@ -18,6 +18,9 @@ e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 ### Alterado
 
+- Explicitadas decisões por seleção nativa em diferentes agentes nas duas skills, com respeito às capacidades da sessão e às escolhas anteriores.
+- Detalhado encerramento de README por tipo de projeto, com autoria, créditos, licença e convite discreto à contribuição ou apoio.
+
 - Recuperados exemplos e critérios de ícones, badges, bandeiras, escrita e
   organização da antiga skill de README em uma referência dedicada.
 - Exigida confirmação dos identificadores de ícones, atribuição de licença e

@@ -184,7 +184,40 @@ Registre ausência de licença em NOTICE sem inventar permissão. Diferencie có
 próprio, componentes de terceiros, marcas e ativos não distribuídos quando isso
 for relevante. Evite avisos legais genéricos copiados de outro produto.
 
+
+## Encerramento do README conforme a origem do projeto
+
+Numa revisão completa, dê encerramento visível ao README: autoria/manutenção,
+créditos, licença e uma ação útil ao leitor. Essas informações podem compartilhar
+espaço num projeto pequeno, mas não devem ficar escondidas num parágrafo sem
+título após uma tabela extensa.
+
+| Situação | Identificação adequada | Encerramento útil |
+| --- | --- | --- |
+| Projeto original | Desenvolvido por autor/equipe confirmados | Perfil, contribuição e apoio discreto quando apropriado |
+| Fork ou distribuição | Autor/projeto original e manutenção desta cópia separados | Créditos de origem, mudanças mantidas e contribuição |
+| Arquivo ou snapshot | Preservação/curadoria e procedência | Convite a corrigir documentação ou registrar divergências |
+| Projeto de equipe | Equipe responsável e canais existentes | Guia de contribuição e suporte realmente disponível |
+
+Use cartão compacto ou bloco de identidade com nome, papel e links reais.
+Avatar é opcional e deve ter origem confirmada; não invente identidade.
+“Desenvolvido por” só se aplica à autoria comprovada. Em forks, use “Mantido por”
+ou “Organização desta distribuição” e preserve a atribuição original.
+
+Dê à licença um título próprio e link para LICENSE ou NOTICE. Indique quando
+terceiros têm termos diferentes; visibilidade privada não concede licença.
+
+Uma frase final como “Este projeto foi útil? Considere deixar uma estrela”
+pode ser usada se adequada ao público e à preferência do mantenedor. Em projeto
+privado ou snapshot, uma mensagem como “Encontrou uma melhoria? Contribua com
+a documentação” também pode ser mais útil. Inclua links que funcionem, sem
+insistência, contadores artificiais, doações, patrocínios ou canais inventados.
+Não faça uma nova pergunta para detalhes de estilo já definidos. Traduza o
+encerramento em todas as versões mantidas e confira seus links.
+
 ## Revisão orientada ao leitor
+
+
 
 Antes de concluir uma revisão completa, confira se as seções presentes respondem
 às necessidades reais e se o leitor encontra primeiro uso, requisitos, limites

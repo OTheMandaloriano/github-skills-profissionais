@@ -30,7 +30,32 @@ tiver `.git`, só pergunte sobre iniciar ou conectar um repositório quando o
 usuário tiver pedido início, organização, versionamento ou publicação do
 projeto. Uma dúvida comum nunca autoriza criar arquivos ou histórico.
 
+
+### Seleção interativa em diferentes agentes
+
+Esta regra se aplica a Codex, Claude Code, OpenCode e outros agentes que
+carreguem esta skill. Descubra a ferramenta nativa de perguntas/seleção
+disponível na sessão e respeite suas restrições de modo e uso; o nome da
+ferramenta e a aparência do formulário variam entre plataformas.
+
+Use seleção para preferências ou decisões ainda não resolvidas que mudam o
+resultado: idiomas, escopo de arquitetura, destino de publicação ou tratamento
+de alterações conflitantes. Apresente poucas opções curtas, explique o impacto
+e indique recomendação quando houver fundamento. Permita resposta livre quando
+a interface oferecer isso. Reutilize escolhas anteriores; não transforme
+padrões profissionais ou ações já autorizadas em pedidos de confirmação.
+
+Não trate opção marcada, silêncio ou passagem de tempo como resposta. Aguarde
+a escolha para ações dependentes e continue o trabalho independente. Se não
+houver seletor permitido, informe a limitação; não apresente listas A/B/C como
+se fossem uma interface interativa. Para informação indispensável, faça uma
+pergunta curta em texto ou mantenha a escolha pendente quando a pessoa exigir
+seleção nativa. Uma skill orienta o comportamento, mas não cria ferramentas
+nem garante interface idêntica entre produtos.
+
 ## Linguagem e escopo do histórico
+
+
 
 Commits, changelog, tags, releases, nomes de branch e arquivos devem descrever
 o projeto e a mudança técnica. Não mencione conversa, prompt, aprovação ou

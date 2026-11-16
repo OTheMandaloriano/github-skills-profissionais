@@ -137,7 +137,32 @@ lacunas com suposições.
   canais reais, distinguindo autoria original, manutenção do fork e contribuições
   de terceiros. Preserve atribuições exigidas e créditos que expliquem a origem.
 
+
+### Seleção interativa em diferentes agentes
+
+Esta regra se aplica a Codex, Claude Code, OpenCode e outros agentes que
+carreguem esta skill. Descubra a ferramenta nativa de perguntas/seleção
+disponível na sessão e respeite suas restrições de modo e uso; o nome da
+ferramenta e a aparência do formulário variam entre plataformas.
+
+Use seleção para preferências ou decisões ainda não resolvidas que mudam o
+resultado: idiomas, escopo de arquitetura, destino de publicação ou tratamento
+de alterações conflitantes. Apresente poucas opções curtas, explique o impacto
+e indique recomendação quando houver fundamento. Permita resposta livre quando
+a interface oferecer isso. Reutilize escolhas anteriores; não transforme
+padrões profissionais ou ações já autorizadas em pedidos de confirmação.
+
+Não trate opção marcada, silêncio ou passagem de tempo como resposta. Aguarde
+a escolha para ações dependentes e continue o trabalho independente. Se não
+houver seletor permitido, informe a limitação; não apresente listas A/B/C como
+se fossem uma interface interativa. Para informação indispensável, faça uma
+pergunta curta em texto ou mantenha a escolha pendente quando a pessoa exigir
+seleção nativa. Uma skill orienta o comportamento, mas não cria ferramentas
+nem garante interface idêntica entre produtos.
+
 ### Ícones, badges e idiomas
+
+
 
 Use ícones SVG do [Iconify](https://icon-sets.iconify.design/) quando eles
 melhorarem a leitura de títulos ou destaques. Escolha uma coleção coerente,
