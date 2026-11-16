@@ -68,6 +68,10 @@ seja encontrado antes mesmo de ser aberto.
 
 ## README e documentação
 
+Antes de criar ou revisar um README, leia
+[o padrão de README e verificação visual](references/padrao-readme.md).
+Ele detalha ícones, badges, bandeiras, escrita, navegação e inventários.
+
 O README deve dizer o que o projeto é, o problema que resolve, requisitos,
 instalação, uso e limitações reais. Em projetos que se beneficiem disso,
 inclua recursos principais, arquitetura e uma demonstração visual.
@@ -93,9 +97,11 @@ release ou publicação que não esteja autorizado.
 Use a interface nativa de seleção interativa disponível no agente para essas
 perguntas. Apresente opções curtas, mutuamente exclusivas, com uma recomendação
 e seu impacto; agrupe as escolhas independentes em uma única interação. Não
-trate a opção pré-selecionada como resposta e não altere o README até a pessoa
-escolher. Se a plataforma não oferecer uma interface de seleção, faça a mesma
-pergunta em texto simples, com opções explícitas.
+trate a opção pré-selecionada como resposta. Aguarde a decisão para as alterações
+que dependem dela e avance nas independentes. Se o seletor estiver indisponível,
+informe a limitação; não simule uma interface interativa com opções escritas
+quando a pessoa exigir seleção nativa. Não invente ferramentas nem contorne
+as restrições de uso da plataforma.
 
 Não deduza idiomas, bandeiras, uma explicação de arquitetura ou uma imagem só
 porque são comuns em outros repositórios. Não use bandeiras sem uma versão
@@ -130,10 +136,11 @@ melhorarem a leitura de títulos ou destaques. Escolha uma coleção coerente,
 como `solar`, e use poucas cores com significado estável: azul para informação,
 verde para disponibilidade e laranja para atenção.
 
-Em README no GitHub, use o formato que o renderizador carrega diretamente:
-`https://api.iconify.design/solar/<nome-do-ícone>.svg?color=%23HEX&width=24`.
-Não use a variante com dois-pontos (`solar:nome`) nesses URLs. Renderize ou
-inspecione o README publicado antes de concluir.
+Confirme cada nome no catálogo oficial antes de gerar seu SVG. Para imagens
+remotas, use o endpoint documentado coleção/ícone.svg, sem presumir que isso
+garante carregamento. Prefira SVGs versionados com licença e atribuição quando
+houver falhas externas. Só declare carregamento confirmado após verificá-lo;
+commit e push não comprovam que a imagem aparece. Consulte a referência acima.
 
 Organize badges em duas fileiras quando houver informações suficientes:
 
