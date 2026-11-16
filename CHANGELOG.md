@@ -8,6 +8,10 @@ e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 ### Adicionado
 
+- Referência para selecionar conteúdo de produto e desenvolvimento conforme
+  evidências, com documentação por objetivo, compatibilidade, roadmap, autoria
+  e créditos, além de adaptação de badges, ícones e cores ao projeto.
+
 - Skill para apresentação profissional de projetos no GitHub.
 - Skill para versionamento, changelog e publicação segura.
 - Instaladores com revisão de sobrescrita para Codex, Claude Code e OpenCode.

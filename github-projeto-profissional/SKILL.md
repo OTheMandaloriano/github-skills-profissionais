@@ -72,6 +72,13 @@ Antes de criar ou revisar um README, leia
 [o padrão de README e verificação visual](references/padrao-readme.md).
 Ele detalha ícones, badges, bandeiras, escrita, navegação e inventários.
 
+Ao preparar uma apresentação completa ou adaptar referências visuais, leia também
+[conteúdo do projeto e adaptação da apresentação](references/conteudo-projeto.md).
+Selecione seções com base no código, documentação e necessidades do leitor:
+desenvolvimento, primeiro uso, requisitos, compatibilidade, documentação por
+objetivo, estado/roadmap, autoria e créditos. Exemplos visuais não comprovam
+funcionalidade, licença ou maturidade; não copie essas alegações.
+
 O README deve dizer o que o projeto é, o problema que resolve, requisitos,
 instalação, uso e limitações reais. Em projetos que se beneficiem disso,
 inclua recursos principais, arquitetura e uma demonstração visual.
@@ -126,8 +133,9 @@ lacunas com suposições.
   publicá-lo. Remova e-mails, tokens, dados de clientes e qualquer informação
   pessoal. Guarde capturas em `assets/screenshots/` ou pasta equivalente.
 - O GitHub gera a lista de contribuidores a partir de commits. Não duplique
-  essa lista manualmente. Registre créditos específicos apenas quando houver
-  exigência de atribuição.
+  essa lista manualmente. Quando útil ao leitor, apresente o mantenedor e seus
+  canais reais, distinguindo autoria original, manutenção do fork e contribuições
+  de terceiros. Preserve atribuições exigidas e créditos que expliquem a origem.
 
 ### Ícones, badges e idiomas
 

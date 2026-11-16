@@ -1,5 +1,10 @@
 # Padrão de README e verificação visual
 
+Para decidir quais informações de uso, desenvolvimento, compatibilidade,
+documentação e créditos apresentar, leia
+[conteúdo do projeto e adaptação da apresentação](conteudo-projeto.md)
+ao fazer uma revisão completa. Para correções pontuais, use as seções abaixo.
+
 ## Conteúdo e escrita
 
 Diga o que o projeto é, para quem serve e como começar. Mudanças pertencem ao
