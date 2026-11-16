@@ -130,6 +130,11 @@ melhorarem a leitura de títulos ou destaques. Escolha uma coleção coerente,
 como `solar`, e use poucas cores com significado estável: azul para informação,
 verde para disponibilidade e laranja para atenção.
 
+Em README no GitHub, use o formato que o renderizador carrega diretamente:
+`https://api.iconify.design/solar/<nome-do-ícone>.svg?color=%23HEX&width=24`.
+Não use a variante com dois-pontos (`solar:nome`) nesses URLs. Renderize ou
+inspecione o README publicado antes de concluir.
+
 Organize badges em duas fileiras quando houver informações suficientes:
 
 1. Tecnologias, em `for-the-badge`, para mostrar as bases do projeto.
