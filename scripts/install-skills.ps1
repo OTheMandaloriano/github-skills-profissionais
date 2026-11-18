@@ -13,7 +13,18 @@ if ($HomePath.TrimEnd('\', '/') -eq $homeRoot.TrimEnd('\', '/')) {
   throw 'Diretório de usuário inválido. Informe uma pasta de usuário, não a raiz do disco.'
 }
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
-$skills = @('github-projeto-profissional', 'versionamento-git')
+
+# Descobre as skills pela presença de SKILL.md: adicionar uma pasta nova
+# no repositório já a torna instalável, sem editar este script.
+$skills = @(
+  Get-ChildItem -LiteralPath $repositoryRoot -Directory |
+    Where-Object { Test-Path -LiteralPath (Join-Path $_.FullName 'SKILL.md') } |
+    Sort-Object Name |
+    Select-Object -ExpandProperty Name
+)
+if ($skills.Count -eq 0) {
+  throw "Nenhuma skill encontrada em $repositoryRoot (procure por pastas com SKILL.md)."
+}
 
 $targets = @{
   Codex = Join-Path $HomePath '.codex\skills'
@@ -45,6 +56,8 @@ foreach ($platform in $selectedTargets) {
     }
   }
 }
+
+Write-Host ("Skills encontradas: {0}" -f ($skills -join ', '))
 
 foreach ($item in $plan) {
   if ($PSCmdlet.ShouldProcess($item.Destination, "Instalar $($item.Skill) para $($item.Platform)")) {

@@ -19,7 +19,18 @@ done
 [[ -n "$home_dir" && "$home_dir" != "/" ]] || { echo "Diretório de usuário inválido. Defina HOME ou use --home caminho." >&2; exit 1; }
 
 repository_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-skills=(github-projeto-profissional versionamento-git)
+
+# Descobre as skills pela presença de SKILL.md: adicionar uma pasta nova
+# no repositório já a torna instalável, sem editar este script.
+skills=()
+for dir in "$repository_root"/*/; do
+  [[ -f "${dir}SKILL.md" ]] || continue
+  skills+=("$(basename "$dir")")
+done
+
+[[ ${#skills[@]} -gt 0 ]] || { echo "Nenhuma skill encontrada em $repository_root (procure por pastas com SKILL.md)." >&2; exit 1; }
+
+echo "Skills encontradas: ${skills[*]}"
 
 check_target() {
   local platform="$1"

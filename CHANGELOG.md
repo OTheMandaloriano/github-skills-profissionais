@@ -8,6 +8,17 @@ e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 ### Adicionado
 
+- Skill `transcrever-video`: transcreve a fala de vídeos do YouTube, Shorts e
+  arquivos locais, entrega o texto no chat e só exporta TXT, SRT, JSON, Markdown
+  ou PDF na pasta escolhida pela pessoa.
+- Política de resíduo zero na skill de transcrição: todo o processamento ocorre
+  em pasta temporária do sistema, removida ao final da execução.
+- Verificação e instalação de dependências da skill de transcrição
+  (`--check`, `instalar_dependencias.ps1` e `instalar_dependencias.sh`), com
+  `pip install --user` e validação de `ffmpeg` no PATH ou embutido no
+  `imageio-ffmpeg`.
+- Referência de captura de áudio pelo navegador para quando o YouTube recusar o
+  download direto (HTTP 403 / SABR).
 - Referência para selecionar conteúdo de produto e desenvolvimento conforme
   evidências, com documentação por objetivo, compatibilidade, roadmap, autoria
   e créditos, além de adaptação de badges, ícones e cores ao projeto.
@@ -18,6 +29,12 @@ e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
 ### Alterado
 
+- Repositório reposicionado como coleção de skills para tarefas diferentes, e
+  não apenas skills de GitHub. README reorganizado com tabela de skills, guia de
+  escolha por objetivo, dependências por skill e exemplos de pedidos.
+- Instaladores passaram a descobrir automaticamente as skills pela presença de
+  `SKILL.md`, sem lista fixa de nomes. Uma pasta nova no repositório já é
+  instalável.
 - Explicitadas decisões por seleção nativa em diferentes agentes nas duas skills, com respeito às capacidades da sessão e às escolhas anteriores.
 - Detalhado encerramento de README por tipo de projeto, com autoria, créditos, licença e convite discreto à contribuição ou apoio.
 

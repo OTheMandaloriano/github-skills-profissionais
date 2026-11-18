@@ -1,13 +1,14 @@
 <div align="center">
 
-<img src="https://api.iconify.design/solar/code-square-bold.svg?color=%2310B981&width=72" alt="Skills profissionais para GitHub" width="72" height="72" />
+<img src="https://api.iconify.design/solar/code-square-bold.svg?color=%2310B981&width=72" alt="Skills profissionais" width="72" height="72" />
 
-# Skills profissionais para GitHub
+# Skills profissionais
 
-Instruções reutilizáveis em pt-BR para estruturar projetos no GitHub e manter um histórico de mudanças claro, coeso e pronto para colaboração.
+Instruções reutilizáveis em pt-BR para trabalho técnico: apresentação de projetos no GitHub, versionamento de código e transcrição de vídeos. Uma skill por tarefa, no formato aberto `SKILL.md`.
 
 [![Codex](https://img.shields.io/badge/Codex-Skills-10A37F?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/codex/)
-[![Git](https://img.shields.io/badge/Git-Versionamento-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-Skills-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://claude.com/claude-code)
+[![OpenCode](https://img.shields.io/badge/OpenCode-Skills-111827?style=for-the-badge&logo=terminal&logoColor=white)](https://opencode.ai/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repositórios-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
 
 [![Idioma](https://img.shields.io/badge/idioma-pt--BR-009C3B?style=flat-square)](README.md)
@@ -18,18 +19,21 @@ Instruções reutilizáveis em pt-BR para estruturar projetos no GitHub e manter
 
 ## <img src="https://api.iconify.design/solar/compass-bold.svg?color=%230EA5E9&width=24" align="top" /> &nbsp;O que este projeto oferece
 
-Este repositório reúne duas skills complementares. Uma organiza a apresentação
-e os recursos de um projeto no GitHub. A outra governa o ciclo de alterações,
-commits, changelog, tags e publicação.
+Este repositório começou como um par de skills para GitHub e passou a ser uma
+coleção: cada pasta é uma skill independente, com instruções completas e, quando
+precisa, scripts próprios.
 
 As skills distinguem dúvida, diagnóstico, trabalho local, publicação e release.
 Elas não criam repositórios, arquivos, branches, commits ou releases quando a
-pessoa apenas pede uma explicação ou uma revisão.
+pessoa apenas pede uma explicação ou uma revisão. A skill de transcrição segue a
+mesma lógica: entrega o texto no chat e só grava arquivo quando a pessoa pede e
+escolhe a pasta.
 
-| Skill | Para que serve |
-| --- | --- |
-| [`github-projeto-profissional`](github-projeto-profissional/SKILL.md) | Organiza README, arquitetura, demonstrações, About, Topics, Releases, Deployments, Packages e branches. |
-| [`versionamento-git`](versionamento-git/SKILL.md) | Mantém commits coesos, revisa o diff preparado, atualiza changelog quando necessário e publica com segurança. |
+| Skill | Categoria | Para que serve |
+| --- | --- | --- |
+| [`github-projeto-profissional`](github-projeto-profissional/SKILL.md) | GitHub | Organiza README, arquitetura, demonstrações, About, Topics, Releases, Deployments, Packages e branches. |
+| [`versionamento-git`](versionamento-git/SKILL.md) | Git | Mantém commits coesos, revisa o diff preparado, atualiza changelog quando necessário e publica com segurança. |
+| [`transcrever-video`](transcrever-video/SKILL.md) | Mídia | Transcreve a fala de vídeos no chat, sem resíduo em disco, e exporta TXT/SRT/JSON/MD/PDF sob demanda. |
 
 ## <img src="https://api.iconify.design/solar/question-circle-bold.svg?color=%23F97316&width=24" align="top" /> &nbsp;Qual skill devo usar?
 
@@ -89,13 +93,63 @@ Veja se há arquivos desnecessários antes do commit.
 Ela não publica nada quando você apenas tira uma dúvida, pede explicação ou
 solicita um diagnóstico.
 
+### `transcrever-video`
+
+Use quando quiser saber o que foi falado em um vídeo, gerar legenda ou resumir
+uma fala, sem ficar com arquivos soltos no computador.
+
+Ela entrega:
+
+- transcrição no chat, com marcação de tempo;
+- resumo do conteúdo falado, quando pedido;
+- exportação opcional em TXT, SRT, JSON, Markdown ou PDF, na pasta que você escolher.
+
+Exemplos de pedidos:
+
+```text
+Transcreva este vídeo: https://youtube.com/shorts/...
+O que foi falado nesse vídeo?
+Gere a legenda SRT deste arquivo de áudio.
+Resuma o que ele disse e me mande o PDF.
+```
+
+Ela trabalha em pasta temporária, apaga tudo no fim e só exporta quando você
+informar o destino. Nada de WAV, frames ou capturas esquecidas em Downloads.
+
+## <img src="https://api.iconify.design/solar/settings-bold.svg?color=%2310B981&width=24" align="top" /> &nbsp;Dependências
+
+Cada skill declara o que precisa. Nenhuma instala nada sem avisar.
+
+| Skill | Precisa de | Como resolve |
+| --- | --- | --- |
+| `github-projeto-profissional` | nada além do agente | — |
+| `versionamento-git` | `git` instalado | confere no início do fluxo e avisa se faltar |
+| `transcrever-video` | Python 3.9+, `faster-whisper`, `yt-dlp`, `ffmpeg` (ou `imageio-ffmpeg`) | `--check` + instalador `pip install --user` |
+
+Na skill de transcrição:
+
+```powershell
+python transcrever-video\scripts\transcrever.py --check
+powershell -ExecutionPolicy Bypass -File transcrever-video\scripts\instalar_dependencias.ps1
+```
+
+```bash
+./transcrever-video/scripts/instalar_dependencias.sh --check
+./transcrever-video/scripts/instalar_dependencias.sh
+```
+
+O instalador valida a versão do Python, instala os pacotes com `--user` (sem
+administrador) e confirma o `ffmpeg` no PATH ou o binário embutido do
+`imageio-ffmpeg`. Se o ambiente bloquear instalação global (PEP 668), use um
+venv temporário e apague no fim.
+
 ## <img src="https://api.iconify.design/solar/box-bold.svg?color=%2310B981&width=24" align="top" /> &nbsp;Compatibilidade e instalação
 
 As instruções usam o formato aberto `SKILL.md`, compatível com Codex, Claude
 Code e OpenCode. O conteúdo é o mesmo; cada ferramenta usa uma pasta de
 instalação própria.
 
-Copie as duas pastas para um destes caminhos e reinicie a ferramenta:
+Copie as pastas das skills para um destes caminhos e reinicie a ferramenta:
 
 ```text
 Codex:       ~/.codex/skills/
@@ -140,9 +194,10 @@ Em macOS ou Linux, use:
 ./scripts/install-skills.sh --target codex
 ```
 
-Os instaladores interrompem a execução se encontrarem uma skill com o mesmo
-nome. Use `-Force` no PowerShell ou `--force` no shell somente depois de revisar
-a atualização que será aplicada.
+Os instaladores descobrem automaticamente toda pasta que tenha `SKILL.md`.
+Eles interrompem a execução se encontrarem uma skill com o mesmo nome. Use
+`-Force` no PowerShell ou `--force` no shell somente depois de revisar a
+atualização que será aplicada.
 
 ## <img src="https://api.iconify.design/solar/rocket-2-bold.svg?color=%23F97316&width=24" align="top" /> &nbsp;Uso
 
@@ -150,12 +205,14 @@ Use pedidos naturais. A intenção do verbo define o fluxo:
 
 | Pedido | Resultado esperado |
 | --- | --- |
-| “Explique como funcionam branches.” | Resposta no chat, sem alterar projeto. |
-| “Revise este repositório.” | Diagnóstico em modo leitura. |
-| “Vamos começar este projeto.” | Avaliação da pasta e organização somente do que for necessário. |
-| “Corrija este problema.” | Implementação e validação local. |
-| “Corrija e publique esta atualização.” | Revisão, commit coeso e push. |
-| “Prepare uma release.” | Avaliação de versão, changelog, tag e notas. |
+| "Explique como funcionam branches." | Resposta no chat, sem alterar projeto. |
+| "Revise este repositório." | Diagnóstico em modo leitura. |
+| "Vamos começar este projeto." | Avaliação da pasta e organização somente do que for necessário. |
+| "Corrija este problema." | Implementação e validação local. |
+| "Corrija e publique esta atualização." | Revisão, commit coeso e push. |
+| "Prepare uma release." | Avaliação de versão, changelog, tag e notas. |
+| "Transcreva este vídeo." | Texto no chat, sem arquivo residual. |
+| "Gere o PDF da transcrição em D:\Docs." | Exportação só na pasta indicada. |
 
 ## <img src="https://api.iconify.design/solar/git-fork-bold.svg?color=%230EA5E9&width=24" align="top" /> &nbsp;Padrão de manutenção
 
@@ -173,6 +230,13 @@ por pull request. A skill cria branch somente quando a política do repositório
 o risco ou a colaboração justificarem; push e release continuam dependendo da
 intenção do pedido e da preparação da versão.
 
+Ao adicionar uma skill nova:
+
+1. crie a pasta com `SKILL.md` e os arquivos de apoio;
+2. declare dependências e como verificá-las;
+3. atualize a tabela de skills e o guia de escolha neste README;
+4. registre a mudança no `CHANGELOG.md`.
+
 ## <img src="https://api.iconify.design/solar/book-2-bold.svg?color=%23F97316&width=24" align="top" /> &nbsp;Entenda os conceitos
 
 <details>
@@ -188,13 +252,13 @@ onde você faz alterações, testa e revisa antes de colocar o resultado na linh
 principal.
 
 ```text
-main ─────── projeto estável
+main ───── projeto estável
 
-main ────┬── branch: correcao-login
+main ───── branch: correcao-login
          └── alterações e testes
-                 ↓
+                 │
               aprovação
-                 ↓
+                 │
 main ─────────── correção integrada
 ```
 
