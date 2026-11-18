@@ -235,7 +235,16 @@ Ao adicionar uma skill nova:
 1. crie a pasta com `SKILL.md` e os arquivos de apoio;
 2. declare dependências e como verificá-las;
 3. atualize a tabela de skills e o guia de escolha neste README;
-4. registre a mudança no `CHANGELOG.md`.
+4. rode `python scripts/validar_skills.py` e corrija o que ele apontar;
+5. registre a mudança no `CHANGELOG.md`.
+
+O validador confere frontmatter, nome da pasta, descrição, caminhos citados e
+sintaxe dos scripts Python de todas as skills. Ele não julga o texto — isso é
+revisão humana.
+
+```powershell
+python scripts\validar_skills.py
+```
 
 ## <img src="https://api.iconify.design/solar/book-2-bold.svg?color=%23F97316&width=24" align="top" /> &nbsp;Entenda os conceitos
 

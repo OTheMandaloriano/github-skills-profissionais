@@ -5,6 +5,10 @@ title: "[bug] "
 labels: bug
 ---
 
+## Skill afetada
+
+Nome da pasta da skill.
+
 ## Comportamento observado
 
 Descreva o que aconteceu.
@@ -19,7 +23,18 @@ Descreva o resultado esperado.
 2. Descreva o segundo passo.
 3. Descreva o terceiro passo.
 
-## Contexto
+## Ambiente
 
-Informe a versão do Codex, sistema operacional e o trecho relevante da skill.
+| Item | Valor |
+| --- | --- |
+| Ferramenta | Codex, Claude Code ou OpenCode, com versão |
+| Sistema | Windows, macOS ou Linux, com versão |
+| Python | versão, quando a skill tiver script |
+
+Se a skill tiver verificação de dependências, cole a saída. Por exemplo:
+
+```text
+python transcrever-video\scripts\transcrever.py --check
+```
+
 Não inclua tokens, dados pessoais ou conversas completas.

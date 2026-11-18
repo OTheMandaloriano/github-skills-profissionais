@@ -19,6 +19,9 @@ e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
   `imageio-ffmpeg`.
 - Referência de captura de áudio pelo navegador para quando o YouTube recusar o
   download direto (HTTP 403 / SABR).
+- `scripts/validar_skills.py`: valida frontmatter, nome da pasta, descrição,
+  caminhos citados e sintaxe dos scripts de todas as skills, sem dependência
+  externa e sem gravar `.pyc`.
 - Referência para selecionar conteúdo de produto e desenvolvimento conforme
   evidências, com documentação por objetivo, compatibilidade, roadmap, autoria
   e créditos, além de adaptação de badges, ícones e cores ao projeto.
@@ -35,6 +38,14 @@ e o projeto adota [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 - Instaladores passaram a descobrir automaticamente as skills pela presença de
   `SKILL.md`, sem lista fixa de nomes. Uma pasta nova no repositório já é
   instalável.
+- `CONTRIBUTING.md` reescrito para a coleção: como criar uma skill, como
+  declarar dependências e como validar antes do pull request. Removida a
+  referência a um validador que não existia no repositório.
+- Templates de issue e pull request atualizados para múltiplas ferramentas
+  (Codex, Claude Code, OpenCode), versão de Python quando houver script e
+  checklist de validação real.
+- `.gitignore` cobre artefatos de Python e resíduo de mídia; `.gitattributes`
+  fixa fim de linha LF para `*.py` e `*.txt`.
 - Explicitadas decisões por seleção nativa em diferentes agentes nas duas skills, com respeito às capacidades da sessão e às escolhas anteriores.
 - Detalhado encerramento de README por tipo de projeto, com autoria, créditos, licença e convite discreto à contribuição ou apoio.
 

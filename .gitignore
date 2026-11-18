@@ -3,3 +3,18 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Resíduo de mídia: as skills trabalham em pasta temporária
+*.wav
+*.webm
+*.m4a
+*.mp3
+*.part
+*.ytdl
+*.tmp
